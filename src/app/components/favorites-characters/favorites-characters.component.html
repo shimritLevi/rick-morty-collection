@@ -1,0 +1,5 @@
+<div class="character-list">
+  <ng-container *ngFor="let character of favorites" class="character-card">
+    <app-character-card [isFavoriteView]="true" [character]="character"></app-character-card>
+  </ng-container>
+</div>

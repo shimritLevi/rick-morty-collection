@@ -1,0 +1,25 @@
+<div class="character-card" (click)="onEditClick()">
+    <button (click)="toggleFavorite($event, character)" class="favorite-btn action-btn">
+        <i class="fa-star" 
+        [ngClass]="isFavorite(character) ? 'fa-solid' : 'fa-regular'"></i>
+        <span class="tooltiptext">{{ (isFavorite(character) ? 'FAVORITE.REMOVE' : 'FAVORITE.ADD') | translate }}</span>
+    </button>
+    
+    <div class="image-container">
+        <img [src]="character.image" [alt]="character.name" />
+    </div>
+    <h3>{{ character.name }}</h3>
+    <p>{{ character.status }} - {{ character.species }}</p>
+    <p *ngIf="character.location">{{ 'CARD.LOCATION' | translate }}: {{ character.location.name }}</p>
+
+    <button class="delete-btn action-btn" (click)="confirmDelete($event, character)">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+</div>
+
+<app-confirm-dialog
+  *ngIf="selectedCharacterForDelete"
+  [characterName]="selectedCharacterForDelete.name"
+  (confirm)="onDeleteConfirmed()"
+  (cancel)="cancelDelete()">
+</app-confirm-dialog>

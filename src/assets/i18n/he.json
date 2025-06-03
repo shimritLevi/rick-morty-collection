@@ -1,0 +1,39 @@
+{
+  "HEADER": {
+    "CHARACTERS": "דמויות",
+    "FAVORITES": "מועדפים",
+    "CREATE": "צור דמות",
+    "MAP": "מפה",
+    "LANG_HE": "עברית",
+    "LANG_EN": "אנגלית",
+    "ABOUTE": "אודות"
+  },
+  "CARD": {
+    "LOCATION": "מיקום"
+  },
+  "SEARCH_PLACEHOLDER": "חפש לפי שם, סוג או מיקום...",
+  "LOAD": {
+    "LOADING": "טוען...",
+    "LOAD_MORE": "טען עוד"
+  },
+  "FAVORITE": {
+    "ADD": "הוסף למועדפים",
+    "REMOVE": "הסר ממועדפים"
+  },
+  "ADD_EDIT": {
+    "NAME": "שם",
+    "NAME_ERROR": "חובה להזין שם",
+    "STATUS": {
+      "TITLE": "מצב",
+      "SELECT": "בחר",
+      "ALIVE": "חי",
+      "DEAD": "מת",
+      "UNKNOWN": "לא ידוע"
+    },
+    "GENDER": "מין",
+    "IMAGE": "קישור לתמונה",
+    "IMAGE_ERROR": "חובה להזין קישור תקני לתמונה",
+    "SAVE": "צור",
+    "UPDATE": "עדכן"
+  }
+}

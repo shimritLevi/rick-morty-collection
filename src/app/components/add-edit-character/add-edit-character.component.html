@@ -1,0 +1,36 @@
+<div class="form-character">
+  <form [formGroup]="characterForm" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label>{{'ADD_EDIT.NAME' | translate}}:</label>
+      <input type="text" formControlName="name" />
+      <div *ngIf="characterForm.get('name')?.invalid && characterForm.get('name')?.touched">
+        {{'ADD_EDIT.NAME_ERROR' | translate}}
+      </div>
+    </div>
+
+    <div class="field">
+      <label>{{'ADD_EDIT.STATUS.TITLE' | translate}}:</label>
+      <select formControlName="status">
+        <option value="">{{'ADD_EDIT.STATUS.SELECT' | translate}}</option>
+        <option value="Alive">{{'ADD_EDIT.STATUS.ALIVE' | translate}}</option>
+        <option value="Dead">{{'ADD_EDIT.STATUS.DEAD' | translate}}</option>
+        <option value="unknown">{{'ADD_EDIT.STATUS.UNKNOWN' | translate}}</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>{{'ADD_EDIT.GENDER' | translate}}:</label>
+      <input type="text" formControlName="species" />
+    </div>
+
+    <div class="field">
+      <label>{{'ADD_EDIT.IMAGE' | translate}}:</label>
+      <input type="text" formControlName="image" />
+      <div *ngIf="characterForm.get('image')?.invalid && characterForm.get('image')?.touched">
+        {{'ADD_EDIT.IMAGE_ERROR' | translate}}
+      </div>
+    </div>
+
+    <button type="submit">{{(isInEditMode ? 'ADD_EDIT.UPDATE' : 'ADD_EDIT.SAVE') | translate}}</button>
+  </form>
+</div>

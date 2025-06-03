@@ -1,0 +1,26 @@
+<div class="search-box">
+    <input type="text" [formControl]="searchForm" placeholder="{{'SEARCH_PLACEHOLDER' | translate }}" />
+</div>
+
+<div class="character-list">
+    <ng-container *ngFor="let character of filteredCharacters">
+        <app-character-card 
+        [isFavoriteView]="false" 
+        [character]="character"
+        (edit)="openEditDialog(character)"
+        (delete)="deleteCharacter(character)"
+        ></app-character-card>
+    </ng-container>
+</div>
+
+<div class="loading" *ngIf="isLoading">{{ 'LOAD.LOADING' | translate }}</div>
+
+<div class="overlay" *ngIf="showDialog" (click)="closeDialog()"></div>
+
+<div class="dialog" *ngIf="showDialog">
+    <app-add-edit-character
+    [character]="selectedCharacter"
+    [isInEditMode]="true"
+    (edit)="updateCharacter($event)"
+    ></app-add-edit-character>
+</div>

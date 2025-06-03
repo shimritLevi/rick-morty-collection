@@ -1,0 +1,137 @@
+@use '../../../styles/colors.scss' as colors;
+@use '../../../styles/variables.scss' as vars;
+
+header {
+    height: vars.$header-hg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: colors.$header-bg;
+    color: white;
+    padding: 0 1rem;
+    position: relative;
+
+    .logo {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .navbar {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        // a:nth-child(1) {
+        //     background-color: colors.$orange;
+        // }
+
+        // a:nth-child(2) {
+        //     background-color: colors.$green;
+        // }
+
+        // a:nth-child(3) {
+        //     background-color: colors.$purple;
+        // }
+
+        // a:nth-child(4) {
+        //     background-color: colors.$light-blue;
+        // }
+
+        .settings {
+            position: relative;
+            cursor: pointer;
+
+            .dropdown {
+                position: absolute;
+                top: 120%;
+                right: 0;
+                background: white;
+                color: #333;
+                border: 1px solid;
+                border-radius: 4px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+
+                a,
+                .dropdown-btn {
+                    display: block;
+                    padding: 0.3rem 0.5rem;
+                    text-decoration: none;
+                    background-color: #333;
+                    color: white;
+                    font-weight: 500;
+                    font-family: system-ui;
+                    font-size: 15px;
+                    padding: 0.5rem 1rem;
+
+                    &:hover {
+                        background: #f0f0f0;
+                        color: #333;
+                    }
+                }
+
+                .dropdown-btn {
+                    border: unset;
+                }
+            }
+        }
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    // Responsive
+    @media (max-width: 768px) {
+        .navbar {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #20232a;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem;
+            display: none;
+
+            &.open {
+                display: flex;
+            }
+
+            .settings .dropdown {
+                position: static;
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                color: white;
+
+                a {
+                    color: white;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+
+        .menu-icon {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<google-map [center]="center" [zoom]="zoom" height="100%" width="100%">
+     <map-marker
+    *ngFor="let character of characters"
+    [position]="getCoordsForCharacter(character.location.name)"
+    [label]="character.name"
+    #marker="mapMarker"
+    (mapClick)="openInfo(character, marker)"
+  >
+  </map-marker>
+
+    <map-info-window>
+        <div *ngIf="selectedCharacter" class="selected-character-info-window">
+            <img [src]="selectedCharacter.image" width="100" style="border-radius: 8px" />
+            <h4>{{ selectedCharacter.name }}</h4>
+            <p>{{ selectedCharacter.status }} - {{ selectedCharacter.species }}</p>
+            <p><strong>Location:</strong> {{ selectedCharacter.location.name }}</p>
+        </div>
+    </map-info-window>
+</google-map>

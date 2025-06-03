@@ -1,0 +1,6 @@
+@use '../../../styles/variables.scss' as vars;
+
+google-map {
+    height: calc(100vh - vars.$header-hg);
+    display: block;
+}

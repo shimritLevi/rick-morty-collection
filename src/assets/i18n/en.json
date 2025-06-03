@@ -1,0 +1,39 @@
+{
+  "HEADER": {
+    "CHARACTERS": "Characters",
+    "FAVORITES": "Favorites",
+    "CREATE": "Create Character",
+    "MAP": "Map",
+    "LANG_HE": "Hebrew",
+    "LANG_EN": "English",
+    "ABOUTE": "aboute"
+  },
+  "CARD": {
+    "LOCATION": "Location"
+  },
+  "SEARCH_PLACEHOLDER": "Search by name, species or location...",
+  "LOAD": {
+    "LOADING": "loading...",
+    "LOAD_MORE": "load more"
+  },
+  "FAVORITE": {
+    "ADD": "Add to favorite",
+    "REMOVE": "Remove from favorite"
+  },
+  "ADD_EDIT": {
+    "NAME": "name",
+    "NAME_ERROR": "name required",
+    "STATUS": {
+      "TITLE": "status",
+      "SELECT": "select",
+      "ALIVE": "alive",
+      "DEAD": "dead",
+      "UNKNOWN": "unknown"
+    },
+    "GENDER": "species",
+    "IMAGE": "image url",
+    "IMAGE_ERROR": "image url required",
+    "SAVE": "create",
+    "UPDATE": "update"
+  }
+}

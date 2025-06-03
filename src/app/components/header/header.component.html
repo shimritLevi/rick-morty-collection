@@ -1,0 +1,22 @@
+<header (clickOutside)="closeAll()">
+
+    <div class="logo">Rick & Morty</div>
+
+    <nav class="navbar" [class.open]="isMenuOpen">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{'HEADER.CHARACTERS' |
+            translate}}</a>
+        <a [routerLink]="favoritesPath" routerLinkActive="active">{{'HEADER.FAVORITES' | translate}}</a>
+        <a [routerLink]="createPath" routerLinkActive="active">{{'HEADER.CREATE' | translate}}</a>
+        <a [routerLink]="mapPath" routerLinkActive="active">{{'HEADER.MAP' | translate}}</a>
+        <div class="settings" (click)="toggleSettings()">
+            ⚙️
+            <div class="dropdown" *ngIf="isSettingsOpen">
+                <button class="dropdown-btn" (click)="changeLang()">
+                    {{(isEnglish() ? 'HEADER.LANG_HE' : 'HEADER.LANG_EN') | translate}}</button>
+                <a [routerLink]="aboutePath" routerLinkActive="active">{{'HEADER.ABOUTE' | translate}}</a>
+            </div>
+        </div>
+    </nav>
+
+    <button class="menu-icon" (click)="toggleMenu()">☰</button>
+</header>
