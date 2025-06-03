@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
 import { MarkdownService } from './markdown.service';
+import { HttpClientTestingModule, provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('MarkdownService', () => {
   let service: MarkdownService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [provideHttpClientTesting()],
+    });
     service = TestBed.inject(MarkdownService);
   });
 
