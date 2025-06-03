@@ -1,5 +1,5 @@
 <div class="character-card" (click)="onEditClick()">
-    <button (click)="toggleFavorite($event, character)" class="favorite-btn action-btn">
+    <button *ngIf="!isFavoriteView" (click)="toggleFavorite($event, character)" class="favorite-btn action-btn">
         <i class="fa-star" 
         [ngClass]="isFavorite(character) ? 'fa-solid' : 'fa-regular'"></i>
         <span class="tooltiptext">{{ (isFavorite(character) ? 'FAVORITE.REMOVE' : 'FAVORITE.ADD') | translate }}</span>
@@ -12,7 +12,7 @@
     <p>{{ character.status }} - {{ character.species }}</p>
     <p *ngIf="character.location">{{ 'CARD.LOCATION' | translate }}: {{ character.location.name }}</p>
 
-    <button class="delete-btn action-btn" (click)="confirmDelete($event, character)">
+    <button *ngIf="!isFavoriteView" class="delete-btn action-btn" (click)="confirmDelete($event, character)">
         <i class="fa-solid fa-trash"></i>
     </button>
 </div>
