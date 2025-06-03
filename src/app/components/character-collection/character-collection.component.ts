@@ -71,7 +71,8 @@ export class CharacterCollectionComponent implements OnInit {
 
           return characters.filter((character) =>
             character.name.toLowerCase().includes(term) ||
-            character.species.toLowerCase().includes(term) // TODO location
+            character.species.toLowerCase().includes(term) ||
+            character.location.name.toLowerCase().includes(term)
           );
         })
       )
