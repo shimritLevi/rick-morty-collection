@@ -8,12 +8,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
  * Uses the /assets/README.md file. 
  */
 @Component({
-  selector: 'app-aboute',
+  selector: 'app-about',
   imports: [CommonModule],
-  templateUrl: './aboute.component.html',
-  styleUrl: './aboute.component.scss',
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss',
 })
-export class AbouteComponent {
+export class AboutComponent {
   
   /** Marker interface for the README file for use in HTML. */
    readmeHtml: SafeHtml = '';

@@ -21,8 +21,8 @@ export class HeaderComponent {
   /** Map path used for routerLink */
   mapPath = '/' + RoutingPath.MAP;
 
-  /** Aboute path used for routerLink */
-  aboutePath = '/' + RoutingPath.ABOUTE;
+  /** About path used for routerLink */
+  aboutPath = '/' + RoutingPath.ABOUT;
 
   /** indicate whether the menu is open (mobile view) */
   isMenuOpen = false;

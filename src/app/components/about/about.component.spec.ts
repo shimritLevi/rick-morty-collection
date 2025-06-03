@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AbouteComponent } from './aboute.component';
+import { AboutComponent } from './about.component';
 import { HttpClientTestingModule, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 describe('AbouteComponent', () => {
-  let component: AbouteComponent;
-  let fixture: ComponentFixture<AbouteComponent>;
+  let component: AboutComponent;
+  let fixture: ComponentFixture<AboutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AbouteComponent,
+        AboutComponent,
         HttpClientTestingModule,
         TranslateModule.forRoot(),
       ],
       providers: [provideHttpClientTesting()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AbouteComponent);
+    fixture = TestBed.createComponent(AboutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -17,21 +17,28 @@ import { AddEditCharacterComponent } from '../add-edit-character/add-edit-charac
 })
 export class CharacterCollectionComponent implements OnInit {
 
+  /** All characters list */
   characters: ICharacter[] = [];
 
+  /** Filtered characters list */
   filteredCharacters: ICharacter[] = [];
 
+  /** The selected character to displayed on the edit dialog */
   selectedCharacter?: ICharacter;
 
+  /** Indicate whether to display the dialog */
   showDialog = false;
 
-  /**  save the total number of pages */
+  /** Save the total number of pages */
   totalPages: number = 0;
 
+  /** Current page (increases each time the user scrolls to the bottom of the page) */
   currentPage$ = new BehaviorSubject<number>(1);
 
+  /** Is waiting for response from the server */
   isLoading = false;
 
+  /** Search form */
   searchForm = new FormControl('');
 
   constructor(

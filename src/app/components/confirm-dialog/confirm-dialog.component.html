@@ -1,10 +1,10 @@
 <div class="overlay">
     <div class="dialog">
-        <h3>אישור מחיקה</h3>
-        <p>האם אתה בטוח שברצונך למחוק את הדמות "{{ characterName }}"?</p>
+        <h3>{{ 'CONFIRM_DIALOG.TITLE' | translate }}</h3>
+        <p>{{ 'CONFIRM_DIALOG.QUESTION' | translate }} {{characterName}} ?</p>
         <div class="actions">
-            <button (click)="onCancel()">ביטול</button>
-            <button (click)="onConfirm()" class="danger">מחק</button>
+            <button (click)="onCancel()">{{ 'CONFIRM_DIALOG.CANCEL' | translate }}</button>
+            <button (click)="onConfirm()" class="danger">{{ 'CONFIRM_DIALOG.DELETE' | translate }}</button>
         </div>
     </div>
 </div>

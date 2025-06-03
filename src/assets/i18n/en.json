@@ -6,7 +6,7 @@
     "MAP": "Map",
     "LANG_HE": "Hebrew",
     "LANG_EN": "English",
-    "ABOUTE": "aboute"
+    "ABOUT": "About"
   },
   "CARD": {
     "LOCATION": "Location"
@@ -35,5 +35,11 @@
     "IMAGE_ERROR": "image url required",
     "SAVE": "create",
     "UPDATE": "update"
+  },
+  "CONFIRM_DIALOG": {
+    "TITLE": "Delete confirmation",
+    "QUESTION": "Are you sure you want to delete ",
+    "CANCEL": "Cancel",
+    "DELETE": "Delete"
   }
 }

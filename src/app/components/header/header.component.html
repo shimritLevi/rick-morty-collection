@@ -13,7 +13,7 @@
             <div class="dropdown" *ngIf="isSettingsOpen">
                 <button class="dropdown-btn" (click)="changeLang()">
                     {{(isEnglish() ? 'HEADER.LANG_HE' : 'HEADER.LANG_EN') | translate}}</button>
-                <a [routerLink]="aboutePath" routerLinkActive="active">{{'HEADER.ABOUTE' | translate}}</a>
+                <a [routerLink]="aboutPath" routerLinkActive="active">{{'HEADER.ABOUT' | translate}}</a>
             </div>
         </div>
     </nav>
