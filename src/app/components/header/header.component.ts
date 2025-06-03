@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RoutingPath } from 'src/app/models/routing-path.model';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { ClickOutsideDirective } from 'src/app/directives/click-outside.directive';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterModule, TranslateModule, ClickOutsideDirective],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
