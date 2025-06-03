@@ -9,7 +9,7 @@
         <a [routerLink]="createPath" routerLinkActive="active">{{'HEADER.CREATE' | translate}}</a>
         <a [routerLink]="mapPath" routerLinkActive="active">{{'HEADER.MAP' | translate}}</a>
         <div class="settings" (click)="toggleSettings()">
-            ⚙️
+            <i class="fa-solid fa-gear"></i>
             <div class="dropdown" *ngIf="isSettingsOpen">
                 <button class="dropdown-btn" (click)="changeLang()">
                     {{(isEnglish() ? 'HEADER.LANG_HE' : 'HEADER.LANG_EN') | translate}}</button>
